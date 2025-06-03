@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration Form</title>
+    <!-- Added Bootstrap 5 via Content Delivery Network link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <h1>Patient Registration Form</h1>
+    </div>
+    <!-- I have added class "was-validated" so that the content entered by the user can be validated or not-->
+    <form class="was-validated">
+        <!-- I've added a class "container" for to hold the content of the form -->
+			<!-- Added a row class with a margin bottom of 3 to create space between content -->
+			<!-- Each form input has label class for column and md for medium for devices and takes up 2 columns -->
+             
+             <!-- Has the class of valid-feedback and invalid-feedback to ensure the user is entering in the correct format -->
+        <div class="container mt-4">
+            <div class="row mb-3">
+                <label for="nhi" class="col-md-2 col-form-label">National Health Index (NHI) number:</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="nhi" placeholder="ABC1234" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>    
+            </div>
+
+             <div class="row mb-3">
+                <label for="fullname" class="col-md-2 col-form-label">Full Name:</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>    
+            </div>
+
+            <div class="row mb-3">
+                <label for="email" class="col-md-2 col-form-label">Email:</label>
+                <div class="col-md-10">
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>    
+            </div>
+
+            <div class="row mb-3">
+                <!-- changed type to number so user can only enter in numbers and not text, aswell as added a minimum of 1 and maximum of 100 so user can only enter between those numbers -->
+                <label for="age" class="col-md-2 col-form-label">Age:</label>
+                <div class="col-md-10">
+                    <input type="number" class="form-control" id="Age" min="1" max="100" placeholder="Enter your age" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>    
+            </div>
+
+             <div class="row mb-3">
+                <label for="address" class="col-md-2 col-form-label">Address:</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="Address" placeholder="Enter your address" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>    
+            </div>
+
+             <div class="row mb-3">
+                <label for="address" class="col-md-2 col-form-label">Terms and Conditions:</label>
+                <div class="col-md-10">
+                    <input type="checkbox" id="terms" required> I agree to terms and Conditions
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>    
+            </div>
+
+            <div class="row mb-3">
+                <!-- Created a button class and changed type to submit -->
+                 <button class="btn-info" type="submit">Submit</button>
+            </div>
+
+
+
+        </div>
+    </form>
+
+</body>
+
+</html>
